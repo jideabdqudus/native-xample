@@ -4,45 +4,59 @@ import { Text, View, StyleSheet, FlatList } from "react-native";
 const ListScreen = () => {
   const friends = [
     {
-      name: "Friend 1",
+      name: "Tolu",
       id: "1",
+      age: "15",
     },
     {
-      name: "Friend 2",
+      name: "Ade",
       id: "2",
+      age: "25",
     },
     {
-      name: "Friend 3",
+      name: "Dipo",
       id: "3",
+      age: "16",
     },
     {
-      name: "Friend 4",
+      name: "Lare",
       id: "4",
+      age: "19",
     },
     {
-      name: "Friend 5",
+      name: "Titi",
       id: "5",
+      age: "22",
     },
     {
-      name: "Friend 6",
+      name: "Chief",
       id: "6",
+      age: "35",
     },
     {
-      name: "Friend 7",
+      name: "Moyin",
       id: "7",
+      age: "12",
     },
   ];
 
   return (
     <View>
+      <Text style={styles.text}>List Screen</Text>
       <FlatList
-        keyExtractor={(friend) => friend.name}
-        data={friends}
+        horizontal={false} //If list should be horizontal not vertical
+        showsHorizontalScrollIndicator={false} //Should the scrollbar show
+        keyExtractor={(friend) => friend.name} //Another way of using list keys
+        data={friends} //Calls the array data
         renderItem={(friend) => {
-          return <Text>{friend.name}</Text>;
+          //Uses the mapping
+          return (
+            <Text style={listStyle}>
+              {friend.name} with Age: {friend.age}{" "}
+            </Text>
+          );
         }}
       />
-      <Text style={styles.text}>List Screen</Text>
     </View>
   );
 };
@@ -50,6 +64,9 @@ const ListScreen = () => {
 const styles = StyleSheet.create({
   text: {
     fontSize: 20,
+  },
+  listStyle: {
+    marginVertical: 30,
   },
 });
 
