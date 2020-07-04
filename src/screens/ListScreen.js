@@ -48,11 +48,11 @@ const ListScreen = () => {
         showsHorizontalScrollIndicator={false} //Should the scrollbar show
         keyExtractor={(friend) => friend.name} //Another way of using list keys
         data={friends} //Calls the array data
-        renderItem={(friend) => {
+        renderItem={({ item }) => {
           //Uses the mapping
           return (
-            <Text style={listStyle}>
-              {friend.name} with Age: {friend.age}{" "}
+            <Text style={styles.listStyle}>
+              {item.name} with Age: {item.age}{" "}
             </Text>
           );
         }}
