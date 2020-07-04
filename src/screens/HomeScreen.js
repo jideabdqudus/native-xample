@@ -2,12 +2,12 @@ import React from "react";
 import { Text, StyleSheet } from "react-native";
 
 const HomeScreen = () => {
-  return <Text style={styles.text}>Abdul-Qudus is Updated</Text>;
+  return <Text style={styles.text}>Hi, Abdul-Qudus</Text>;
 };
 
 const styles = StyleSheet.create({
   text: {
-    fontSize: 30,
+    fontSize: 20,
   },
 });
 
