@@ -6,17 +6,17 @@ const ImageDetail = () => {
     {
       id: "1",
       title: "Beach",
-      image: "../../assets/beach.jpg",
+      image: require("../../assets/beach.jpg"),
     },
     {
       id: "2",
       title: "Forest",
-      image: "../../assets/forest.jpg",
+      image: require("../../assets/forest.jpg"),
     },
     {
       id: "3",
       title: "Mountain",
-      image: "../../assets/mountain.jpg",
+      image: require("../../assets/mountain.jpg"),
     },
   ];
 
@@ -30,7 +30,7 @@ const ImageDetail = () => {
           return (
              <View> 
                 <Text>{item.title}</Text>
-                <Image source={item.image}/>
+                <Image source={item.image} />
              </View>
           )
         }}
