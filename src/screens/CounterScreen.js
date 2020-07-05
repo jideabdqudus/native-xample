@@ -10,10 +10,14 @@ const CounterScreen = () => {
   const onDecrease = () => {
     setCounter(counter - 1);
   };
+  const onReset = () => {
+    setCounter(0);
+  };
   return (
     <View>
       <Button title="Increase" onPress={onIncrease} />
       <Button title="Decrease" onPress={onDecrease} />
+      <Button title="Reset" onPress={onReset} />
       <Text>Current Count: {counter}</Text>
     </View>
   );
