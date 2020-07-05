@@ -4,7 +4,9 @@ import { Text, StyleSheet, View, Button, FlatList } from "react-native";
 const ColorScreen = () => {
   const [colors, setColors] = useState([]);
 
-  const onPress = () => {};
+  const onPress = () => {
+    setColors([...colors, randomRgb()]);
+  };
   return (
     <View>
       <Text>Color Screen</Text>
