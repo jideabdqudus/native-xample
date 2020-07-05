@@ -46,7 +46,7 @@ const ListScreen = () => {
       <FlatList
         horizontal={false} //If list should be horizontal not vertical
         showsHorizontalScrollIndicator={false} //Should the scrollbar show
-        keyExtractor={(friend) => friend.name} //Another way of using list keys
+        keyExtractor={(item) => item.name} //Another way of using list keys
         data={friends} //Calls the array data
         renderItem={({ item }) => {
           //Uses the mapping
