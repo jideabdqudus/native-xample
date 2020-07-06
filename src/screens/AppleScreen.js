@@ -12,7 +12,7 @@ const AppleScreen = () => {
     {
       id: "1",
       title: "Beach",
-      by: "Qudusini Lacoste",
+      by: "Qudusini Zeez",
       image: require("../../assets/beach.jpg"),
     },
     {
