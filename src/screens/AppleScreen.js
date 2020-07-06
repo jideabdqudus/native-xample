@@ -1,27 +1,35 @@
 import React from "react";
-import { View, Text, Button, Image, StyleSheet, FlatList } from "react-native";
+import {
+  View,
+  Text,
+  Button,
+  Image,
+  StyleSheet,
+  FlatList,
+  ScrollView,
+} from "react-native";
 
 const AppleScreen = () => {
-    const imageProps = [
-        {
-          id: "1",
-          title: "Beach",
-          by: "Qudusini Lacoste",
-          image: require("../../assets/beach.jpg"),
-        },
-        {
-          id: "2",
-          title: "Forest",
-          by: "Trip Adelabu",
-          image: require("../../assets/forest.jpg"),
-        },
-        {
-          id: "3",
-          title: "Mountain",
-          by: "Kags Kapaichu",
-          image: require("../../assets/mountain.jpg"),
-        },
-      ];
+  const imageProps = [
+    {
+      id: "1",
+      title: "Beach",
+      by: "Qudusini Lacoste",
+      image: require("../../assets/beach.jpg"),
+    },
+    {
+      id: "2",
+      title: "Forest",
+      by: "Trip Adelabu",
+      image: require("../../assets/forest.jpg"),
+    },
+    {
+      id: "3",
+      title: "Mountain",
+      by: "Kags Kapaichu",
+      image: require("../../assets/mountain.jpg"),
+    },
+  ];
   return (
     <View>
       <Text style={styles.Library}>Library</Text>
@@ -32,22 +40,24 @@ const AppleScreen = () => {
       <Text style={styles.Playlist}>Albums </Text>
       <View style={styles.Line} />
       <Text style={styles.Recent}>Recently Added</Text>
-      <FlatList
-        data={imageProps}
-        numColumns={imageProps.length / 2}
-        showsHorizontalScrollIndicator={false}
-        showsVerticalScrollIndicator={false}
-        keyExtractor={(item) => item.title}
-        renderItem={({ item }) => {
-          return (
-             <View> 
+      <ScrollView>
+        <FlatList
+          data={imageProps}
+          numColumns={imageProps.length / 1}
+          showsHorizontalScrollIndicator={false}
+          showsVerticalScrollIndicator={false}
+          keyExtractor={(item) => item.title}
+          renderItem={({ item }) => {
+            return (
+              <View>
                 <Image style={styles.Image} source={item.image} />
                 <Text style={styles.Title}>{item.title}</Text>
                 <Text style={styles.By}>{item.by}</Text>
-             </View>
-          )
-        }}
-      />
+              </View>
+            );
+          }}
+        />
+      </ScrollView>
     </View>
   );
 };
@@ -81,36 +91,36 @@ const styles = StyleSheet.create({
     right: 0,
     alignItems: "flex-end",
   },
-  Recent:{
-      fontSize: 25,
-      fontWeight: "600",
-      margin: 30,
-      marginBottom:0
-  },
-  Image:{
-      margin: 30,
-      marginTop: 20,
-      marginRight: 0,
-      marginBottom: 0,
-      width: 150,
-      height: 150,
-      borderRadius: 5,
-  },
-  Title:{
-      margin: 30,
-      marginBottom:0,
-      marginTop: 4,
-      fontWeight:"500",
-      fontSize: 20,
-  },
-  By:{
+  Recent: {
+    fontSize: 25,
+    fontWeight: "600",
     margin: 30,
-    marginBottom:0,
+    marginBottom: 0,
+  },
+  Image: {
+    margin: 30,
+    marginTop: 20,
+    marginRight: 0,
+    marginBottom: 0,
+    width: 150,
+    height: 150,
+    borderRadius: 5,
+  },
+  Title: {
+    margin: 30,
+    marginBottom: 0,
     marginTop: 4,
-    fontWeight:"500",
+    fontWeight: "500",
+    fontSize: 20,
+  },
+  By: {
+    margin: 30,
+    marginBottom: 0,
+    marginTop: 4,
+    fontWeight: "500",
     fontSize: 17,
-    color: "#808080"
-}
+    color: "#808080",
+  },
 });
 
 export default AppleScreen;
