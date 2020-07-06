@@ -2,11 +2,9 @@ import React from "react";
 import {
   View,
   Text,
-  Button,
   Image,
   StyleSheet,
   FlatList,
-  ScrollView,
 } from "react-native";
 
 const AppleScreen = () => {
@@ -40,7 +38,6 @@ const AppleScreen = () => {
       <Text style={styles.Playlist}>Albums </Text>
       <View style={styles.Line} />
       <Text style={styles.Recent}>Recently Added</Text>
-      <ScrollView>
         <FlatList
           data={imageProps}
           numColumns={imageProps.length / 1}
@@ -57,7 +54,6 @@ const AppleScreen = () => {
             );
           }}
         />
-      </ScrollView>
     </View>
   );
 };
