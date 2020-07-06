@@ -2,35 +2,34 @@ import React from "react";
 import { View, Text, Button, StyleSheet } from "react-native";
 
 const SquareScreen = () => {
+    const moreRed =()=>{
+        const red = Math.floor(Math.random() * 256)
+
+        return
+    }
   return (
     <View>
       <Text>Square Screen</Text>
       <View>
-        <Text>Red</Text>
-        <Button title="More Red" onPress={} />
-        <Button title="Less Red" onPress={} />
+        <Button title="More Red" onPress={moreRed} />
+        <Button title="Less Red" />
       </View>
       <View>
-        <Text>Green</Text>
-        <Button title="More Green" onPress={} />
-        <Button title="Less Green" onPress={} />
+        <Button title="More Green" />
+        <Button title="Less Green" />
       </View>
       <View>
-        <Text>Blue</Text>
-        <Button title="More Blue" onPress={} />
-        <Button title="Less Blue" onPress={} />
+        <Button title="More Blue" />
+        <Button title="Less Blue" />
       </View>
       <View>
-        <Text>Red</Text>
-        <View style={{ height: 100, width: 100, backgroundColor: item }} />
+        <View style={{ height: 100, width: 100, backgroundColor: "black" }} />
       </View>
     </View>
   );
 };
 
-const randomRgb = () => {
-    
-};
+const randomRgb = () => {};
 
 const styles = StyleSheet.create({});
 
