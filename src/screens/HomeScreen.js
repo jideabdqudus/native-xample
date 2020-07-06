@@ -2,7 +2,7 @@ import React from "react";
 import { Text, StyleSheet, View, Button, TouchableOpacity } from "react-native";
 
 const HomeScreen = ({ navigation }) => {
-  const onLaunch = "Expo still working Offline!";
+  const onLaunch = "Expo still working Offline x2!";
   return (
     <View styles={styles.view}>
       <Text style={styles.onLaunch}>{onLaunch}</Text>
@@ -40,6 +40,11 @@ const HomeScreen = ({ navigation }) => {
       <Button
         title="Go to Text Screen"
         onPress={() => navigation.navigate("Text")}
+      />
+
+      <Button
+        title="Go to Box Screen"
+        onPress={() => navigation.navigate("Box")}
       />
 
       <TouchableOpacity onPress={() => navigation.navigate("List")}>
