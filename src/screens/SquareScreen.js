@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, Button, StyleSheet } from "react-native";
+import ColorCounter from "../components/ColorCounter";
 
 const SquareScreen = () => {
     const moreRed =()=>{
@@ -11,8 +12,7 @@ const SquareScreen = () => {
     <View>
       <Text>Square Screen</Text>
       <View>
-        <Button title="More Red" onPress={moreRed} />
-        <Button title="Less Red" />
+        <ColorCounter/>
       </View>
       <View>
         <Button title="More Green" />
