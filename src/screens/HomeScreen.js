@@ -2,7 +2,7 @@ import React from "react";
 import { Text, StyleSheet, View, Button, TouchableOpacity } from "react-native";
 
 const HomeScreen = ({ navigation }) => {
-  const onLaunch = "Wagwan!";
+  const onLaunch = "Expo still working Offline!";
   return (
     <View styles={styles.view}>
       <Text style={styles.onLaunch}>{onLaunch}</Text>
