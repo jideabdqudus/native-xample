@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native'
 const BoxScreen = () => {
     return (
         <View style={styles.viewStyle}>
-            <Text style={styles.textStyle}>Box</Text>
+            <Text style={styles.textStyle}>Box Screen</Text>
         </View>
     )
 }
@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: "#fbca02",
         margin: 20,
-        
+
     }
 })
 

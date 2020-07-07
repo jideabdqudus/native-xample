@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  View,
-  Text,
-  Image,
-  StyleSheet,
-  FlatList,
-} from "react-native";
+import { View, Text, Image, StyleSheet, FlatList } from "react-native";
 
 const AppleScreen = () => {
   const imageProps = [
@@ -30,7 +24,7 @@ const AppleScreen = () => {
   ];
   return (
     <View>
-      <Text style={styles.Library}>Library</Text>
+      <Text style={styles.Library}>Library </Text>
       <Text style={styles.Playlist}>Playlists </Text>
       <View style={styles.Line} />
       <Text style={styles.Playlist}>Artists </Text>
@@ -38,22 +32,22 @@ const AppleScreen = () => {
       <Text style={styles.Playlist}>Albums </Text>
       <View style={styles.Line} />
       <Text style={styles.Recent}>Recently Added</Text>
-        <FlatList
-          data={imageProps}
-          numColumns={imageProps.length / 1}
-          showsHorizontalScrollIndicator={false}
-          showsVerticalScrollIndicator={false}
-          keyExtractor={(item) => item.title}
-          renderItem={({ item }) => {
-            return (
-              <View>
-                <Image style={styles.Image} source={item.image} />
-                <Text style={styles.Title}>{item.title}</Text>
-                <Text style={styles.By}>{item.by}</Text>
-              </View>
-            );
-          }}
-        />
+      <FlatList
+        data={imageProps}
+        numColumns={imageProps.length / 1}
+        showsHorizontalScrollIndicator={false}
+        showsVerticalScrollIndicator={false}
+        keyExtractor={(item) => item.title}
+        renderItem={({ item }) => {
+          return (
+            <View>
+              <Image style={styles.Image} source={item.image} />
+              <Text style={styles.Title}>{item.title}</Text>
+              <Text style={styles.By}>{item.by}</Text>
+            </View>
+          );
+        }}
+      />
     </View>
   );
 };
